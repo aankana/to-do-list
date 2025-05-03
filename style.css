@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    /* background-color: gray; */
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(69, 69, 69);
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #cecece;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2{
+    color: black;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+/* inner input */
+input{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+#input-box{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+.add-button{
+    border: none;
+    outline: none;
+    color: #ffff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 30px;
+    margin: 7px;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin: 5px;
+    background: #dddddd;
+    border-radius: 20px;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50px;
+    background-image: url(assets/un-check-mark.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(assets/check-mark.png);
+}
+ul li .delete-button{
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 26px;
+    height: 26px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+ul li .edit-button{
+    position: absolute;
+    right: 45px;
+    top: 7px;
+    width: 25px;
+    height: 25px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
